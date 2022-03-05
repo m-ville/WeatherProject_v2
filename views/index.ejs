@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <div class="Navbar_search">
+    <nav class="">
+        <a class="navbar_brand" href="#" >Weather APP</a>
+    
+        <form class="" action="/" method="post">
+          <input class="" type="text" name="cityName" id="cityInput" placeholder="Enter City Name.">
+          <button class="" type="submit">Search</button>
+        </form>
+    
+      </nav>
+  </div>
+
+
+  <div class="wrapper">
+    <div class="widget-container">
+      <div class="top-left">
+        <h1 class="city" id="city"><%=name%></h1>
+        <h2 id="day"><%=day%></h2>
+        <p id="desc"><%=desc%></p>
+      </div>
+      <div class="top-right">
+        <p id="weather-status">Weather / Weather Status</p>
+        <img class="weather-icon" src="<%= imgUrl %>">
+      </div>
+      <div class="horizontal-half-divider"></div>
+      <div class="bottom-left">
+        <p class="realfeel">RealFeel</p>
+        <h1 id="temperature"><%=Temp%></h1>
+        <h2 id="celsius">&degC</h2>
+      </div>
+      <div class="vertical-half-divider"></div>
+      <div class="bottom-right">
+        <div class="other-details-key">
+          <p>Wind Speed</p>
+          <p>Humidity</p>
+          <p>Pressure</p>
+          <p>Minimun temp.</p>
+          <p>Maximum temp.</p>
+        </div>
+        <div class="other-details-values">
+          <p class="windspeed"><%=wind%> m/s</p>
+          <p class="humidity"><%=humidity%> %</p>
+          <p class="pressure"><%=pressure%> hPa</p>
+          <p class="sunrise-time"><%=minTemp%> &degC</p>
+          <p class="sunset-time"><%=maxTemp%> &degC</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+</body>
+
+</html>
+
+
